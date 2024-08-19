@@ -76,3 +76,5 @@ A.--  UseState = The useState hook is essential for managing state within functi
 - When you need to store data that can change over time within a component.
 - When you need to trigger re-renders based on state changes.   
 - When you want to manage local component state without affecting parent or global state.
+
+
