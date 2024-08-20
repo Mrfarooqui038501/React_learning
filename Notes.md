@@ -3,7 +3,32 @@ NOTE = Function name and file name can be different but for good practice we Kee
 
 
 1. Basics of react and installation 
-a. vite  installation =  
+a. vite  installation =  npm create vite@latest 
+b. give project name
+c. cd to project name
+d. npm install
+
+B. Tailwind css 
+-- npm install -D tailwindcss postcss autoprefixer
+-- npx tailwindcss init -p
+-- /** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} 
+  
+  paste above code in tailwind.config.js
+
+-- paste bwelow all  line in the  index.css file at the top
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 2. <> </> =  These  called fragments 
