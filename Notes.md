@@ -633,3 +633,66 @@ const store = configureStore({
 
 export default store;
 
+
+-- Store
+- Centralized State Container: The Redux store is a single source of truth for your application's state. It holds the entire application state as an object.
+- Immutable Updates: To update the state, you dispatch actions, and reducers handle the updates by returning a new state object, ensuring immutability.
+- Access and Modification: You can access the store's state using the getState method and modify it by dispatching actions.
+
+-- Actions
+- Plain JavaScript Objects: Actions are plain JavaScript objects that describe the changes to the state.
+- Type and Payload: Actions typically have a type property to identify the action and an optional payload property containing additional data.
+- Dispatching: Actions are dispatched to the store using the dispatch function.
+
+
+--Reducers
+- Pure Functions: Reducers are pure functions that take the current state and an action as input and return the new state.
+- State Calculation: Reducers calculate the new state based on the action type and payload.
+- Immutability: Reducers must return a new state object, ensuring that the original state remains unchanged.
+
+
+-- Dispatch
+-Sending Actions: The dispatch function is used to send actions to the Redux store.
+- Reducer Updates: When an action is dispatched, the Redux store calls the appropriate reducer to calculate the new state based on the action type and payload.
+
+Key Points:
+- The store holds the application's state.
+- Actions describe changes to the state.
+- Reducers calculate the new state based on actions.
+- dispatch is used to send actions to the store.
+- Slices provide modularity and organization.
+
+E.G. 
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+
+// Define a slice
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    value: 0
+  },
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    }
+  }
+});
+
+// Export the actions and reducer
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;
+
+// Create the store
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer
+  }
+});
+
+// Dispatch actions to update the state
+store.dispatch(increment());
+store.dispatch(decrement());
+
