@@ -13,6 +13,7 @@ export class AuthService {
         this.account = new Account(this.client);
             
     }
+            
 
     async createAccount({email, password, name}) {
         try {
