@@ -911,3 +911,58 @@ In this example:
 console.log(proxy.name); // Output: Getting property: name
 console.log(proxy.age); // Output: Getting property: age
 proxy.age = 31; // Output: Setting property: age to 31
+
+
+///////////////                     MEMOIZATION
+
+ MEMOIZATION = is a technique used in programming to cache the results of function calls. When a function is memoized, its return value is stored for a given set of arguments. If the function is called again with the same arguments, the cached result is returned instead of re-calculating it.
+
+
+-- Benefits of Memoization:
+- Improved performance: Avoids redundant calculations, especially for expensive functions.
+- Reduced resource usage: Can reduce memory usage and CPU load.
+Simplified code: Can make code more concise and easier to understand.
+E.g. 
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+// Memoized version
+function memoizedFactorial(n, cache = {}) {
+  if (n in cache) {
+    return cache[n];
+  }
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  cache[n] = n * memoizedFactorial(n - 1, cache);
+  return cache[n];
+}
+In this example, the memoizedFactorial function uses a cache object to store calculated results. If the function is called with the same argument, the cached result is returned instead of recalculating the factorial.
+
+
+-- Memoization in React:
+- React provides the useMemo hook to memoize values within functional components. This can be helpful for optimizing performance by preventing unnecessary re-calculations.
+
+import { useMemo } from 'react';
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  const expensiveCalculation = useMemo(() => {
+    // Perform an expensive calculation
+    return Math.pow(count, 2);
+  }, [count]);
+
+  return (
+    <div>
+      <p>Result: {expensiveCalculation}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+In this example, the expensiveCalculation is memoized using useMemo. It will only be recalculated if the count value changes.
+
+
