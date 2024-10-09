@@ -15,6 +15,7 @@ function TodoForm() {
     }
 
   return (
+     
       <form onSubmit={add}  className="flex">
           <input
               type="text"
@@ -27,6 +28,7 @@ function TodoForm() {
               Add
           </button>
       </form>
+     
   );
 }
 
