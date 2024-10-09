@@ -966,3 +966,280 @@ function MyComponent() {
 In this example, the expensiveCalculation is memoized using useMemo. It will only be recalculated if the count value changes.
 
 
+/////////// interview Questions 
+1. what is react 
+a. React is an open source javscript library 
+b. React is used for building interfaces(UI)
+c. React simplifies the creation of SPA by using reusable componets 
+
+2. what are the key features of React?   7 key features 
+a. virtual dom   = React utilizes a virtual respresentation of the dom, allowing efficient updates by minimizing direct manupulation of the actula dom, resulting in improved performance 
+
+b. component based Architechire = React strcutures user interface as modular, resuable components, promoting a more maintainable and scalable approach to building applications
+
+c. reusability & composition = React enables the creation of reusable components that can be composed together,fostering a modular and efficient developments process.
+
+d. JSX (javascript XML) = JSX is a syntax extension for javascript used in react, allowing developers to write HTML-like code with javascript, enhancing readablility and maintainability.
+
+e. declerative syntax = Reacct have a declarative programming style (JSX), where developers focus on "what" the UI should look like and react handles the "how" behind the scenes. this simplify the code
+
+f. community & ecosystem = React benefits from a vibrant and extensive community, contributing to a rich ecosysytem of libraries, tools, and resources, fostering colllabrative development and innovation 
+
+g. react hooks = HOOKSA are functions that enable functional components to manage state and lifecycle features, providing a more concise and expensive way to handle component logic. 
+
+
+3. WHAT IS DOM? (DOCUMENT OBJECT MODEL)
+DOM represents the web page as a tree-like structure which allows javascript to dynamically access and manipulate the content and structure of a web page.
+
+4. WHAT IS VIRTUAL DOM? DIFFERENCE BETWEEN DOM AND VIRTUAL DOM?
+React uses a virtual DOM to efficiently update the UI without re-render the entire page, which helps improve performance and make the application more responsive. 
+                     DOM                                                          VIRTUAL DOM
+1.DOM is actula representation of the webpage           Virtual dom is lightweight copy of the dom 
+2.RE-renders the entire page when updates occur         RE-renders only the changed parts efficiently 
+3.Can be slower, especially with frquent updates        optimized for faster rendering 
+4.Suitable for static website and simple application    ideal for dynamic and complex single-page --  ---           applications with frequent updates  
+
+
+5.WHAT ARE REACT COMPONENTS? WHAT are the main elements of it?
+IN react, a component is a REUSABLE BUILDING BLOCK for creating user interfaces.
+
+6.WHAT IS SPA(SINGLE PAGE APPLICATIONS)
+- A SINGLE PAGE APPLICATION(SPA) is a web application that have only one single web page.
+- Whenever user do some action on the website, then in response content is dynamically updated without refreshing or  loading a new page. 
+
+7.WHAT ARE THE 5 ADVANTAGES OF REACT? 
+1. Simple to build Single page Appliation (by using COMPONENTS)
+2. REACT is cross Platform and open source (free to use)
+3. LightWeight and very fast (Virtual DOM)
+4. Large Community and Ecosystem
+5. Testing is easy
+
+8.WHAT ARE THE DISADANTAGES OF REACT?
+REACT Is not good choice for very small applications
+
+9.WHAT is the role of jsx in React? 
+1.JSX stands for Javascript XML.
+2.JSX is used by React to write HTML-like code
+3.JSX is converted to javascript via tools like babel. beacause browser understand javascript not jsx
+
+10.WHAT IS THE DIFFERECE BWTWEEM DECLARATIVE AND IMPERATIVE Syntax?
+a. DECLARATIVE SYNTAX =
+1. Declarative syntax focuses on describing the desired result wihtout specifying the step-by-step process.
+2. JSX in React is used to write declarative syntax
+
+b.IMPERATIVE SYNTAX =
+1. Imperative syntax involves step by step  process to be achieve a particular goal
+2. Javascript has an imperative syntax.
+
+11.WHAT IS ARROW FUNCTION EXPRESSION IN JSX? 
+The arrow function expression syntax is a concise way of defining functions 
+
+12.HOW TO SETUP REACT PROJECT?
+the usally way we do using node vs code and further process
+
+13.WHAT ARE THE MAIN FILES IN REACT PROJECT?
+1. INDEX.HMTL = Single page for react application
+2.COMPONENTS/COMPONENT1.js = your application components
+3.App.js = main component or container or Root component
+4.App.test.js(optional) = used for writing tests for the app.js file 
+5.Index.css(optional) = This is a global CSS file that serves as the main stylesheet for the entire applicatoin
+6.Index.js = Entry point for javascript. Renders the main react component (App) into the root dom element. 
+
+14.HOW REACT APP LOAD AND DISPLAY THE COMPONENTs IN BROWSER?
+                      index.html 1
+replace page which loads index.js by react libraries 
+                      index.js 2
+replace root element of index.html file by app component
+                        App.js 3                                                                           
+Root component which is the container of all the child components 
+                          child component.js
+custom child components placed over app component 
+
+15.HOW REACT APP LOAD AND DISPLAY THE COMPONENTS IN BROWSER?
+1.JSX Compilation: The JSX code is compiled into regular JavaScript code using tools like Babel.
+2.Component Tree Creation: React creates a virtual DOM tree representing the initial state of the application.
+3.Rendering: The virtual DOM tree is compared to the actual DOM. React identifies the differences and updates only the necessary parts of the actual DOM to match the virtual DOM.
+4.State Changes: When the application's state changes (e.g., due to user interactions or data updates), React re-renders the affected components by updating the virtual DOM and applying the necessary changes to the actual DOM.
+
+16.DIFFERENCE BETWEEN REACT & ANGULAR?
+REACT 
+1.REACT is a javscript library.
+2.REACT Used a virtual dom which makes it faster 
+3.REACT is smaller in size and lightweight and therefore faster sometime 
+4.React depends on external libraries for many complex features, so developer has to write many lines of code for complex functionalities 
+5.React is simple to learn and more popular than angular 
+
+ANGULAR 
+1.Angular is a complete framework
+2.Angular uses a real dom
+3.Angular is bigger because it is a complete framework
+4.sincle angular is a complete framework, therefore it provide built-in support for features like routing, forms,validation, and HTTP requests 
+5.Angular is slightly difficult to learn as it has typescript, oops concept and many more thing. 
+
+17.WHAT ARE THE OTHER 5 JS FRAMEWOrK OTHER THAN REACT?
+Angular, vue.js, angular.js, Backboen.js, Ember.js 
+
+18.Wheater React is a framework or a library? what is the difference?
+React is commonly reffered to as a javascript library 
+LIBRARY: Developers import the libraries at the top and then used its functions in components 
+
+Framework: Developers need to follow a specific structure or pattern defined by the framework
+
+18.HOW REACT PROVIDES REUSABLILITY AND COMPOSITION?
+-REACT provides reusability and composition through its component-based architechure
+
+-REUSABLITIY: Once you create a component, you can re-use it in different part of your application or even in multiple projects
+
+-COMPOSITION - Composition is creating new and big components by combinigng exisitng small components. its advantage is, change to one small component will not impact other components. 
+
+19.WHAT ARE STATE, STATELESS, STATEFUL and STATE MANAGEMENT TERMS?
+-STATE refers to the current data of the component.
+-STATEFUL/STATE MANAGEMENT: means when a user performs some actions on the UI, then the react applications should be able to update and re-render that data or state on the UI.  
+
+20.WHAT ARE THE PROPS IN JSX? 
+Props (properties) are a way to pass data from a parent compoenent to a child component
+
+21. WHAT IS NPM? WHAT IS THE ROLE OF NODE_MODULES FOLDER? 
+NPM(NODE PACKAGE MANAGER) is used to manage the dependencies for your react project, including the React Library itself.
+
+-NODE_MODULES folder contains all the dependencies of the project, including the React libraries. 
+
+22.WHAT IS THE ROLE OF PUBLIC FOLDER IN REACT?
+Public folder contains STATIC ASSESTS that are served direclty to the user's browser, such as images, fonts, and the index.html file. 
+
+23.WHAT IS THE ROLE OF SRC FOLDER in REACT?
+SRC folder is used to store all the source code of the application which is then responsible for the dynamic changes in your web application. 
+
+24.WHAT IS THE ROLE OF INDEX.HTML FILE (SPA) IN REACT APPLICATION?
+index.html files is the main HTML file (SPA) in React application.
+- Here the div with "id=root" will be replaced by the component inside index.js file.
+
+25.WHAT IS THE ROLE OF INDEX.JS FILE AND REACTDOM IN REACT?
+REACTDOM is a javascirpt library that renders components to the DOM or browser.
+- the index.js file is the javascript file that replaces the root element of the index.html file  with the newly rendered components 
+
+26.WHAT IS THE ROLE OF APP.JS FILE IN REACT? 
+-App.js file contain the root component(App) of react appliation 
+-App component is like a container for other components.
+-App.js defines the structure, layout and routing in the application
+ 
+27.WHAT IS THE ROLE OF FUNCTION AND RETURN INSIDE APP.JS?
+-The function keyword is used to define a javascript function that represent your React component.
+-Function is like a placeholder which contains all the code or logic of component.
+-The function takes in props as its argument (if needed) and returns JSX
+-RETURN = return is used to return the element from the function.
+
+28.CAN WE HAVE A FUNCTION WITHOUT A RETURN STATEMENT INSIDE App.js?
+- Yes, a function without a return statement is possible
+-in that case, your component will not render anything in UI.
+- THE COMMON USE CASE IS FOR LOGGING PURPOSE.
+
+29.WHAT IS THE ROLE OF EXPORT DEFAULT INSIDE APP.JS?
+export statement is used to make a component available for import using "import" statement in other files
+
+30.DOES THE FILE NAME AND THE COMPONENT NAME MUST BE SAME IN REACT?
+-No, the file name and the component name don't have to be the same.
+-However, it is recomended to keep them same for easier and understand your code.
+
+31.WHAT IS THE ROLE OF JSX IN REACT? (3 points)
+-JSX Stands for JAVASCRIPT XML.
+-JSX is used by React to write HTML-like code
+-JSX is converted to JAVASCRIPT via tools like BABEL.
+
+32.WHAT ARE THE ADVANTAGES OF JSX?
+-improve code readability and writablility.
+--Error checking in advance (TYPE SAFETY).
+-Support javascript expressions
+-improved performance
+-code resuabliity
+
+33.WHAT is BABEL?
+Babel in react is used to transpile JSX syntax into regular javascript which browser can understand
+
+34.WHAT IS THE ROLE OF FRAGMENT IN JSX?
+-IN REACT, a fragment is a way to group multiple children's element
+-using a fragment prevents the adition of unnecessary nodes to dom
+
+35.WHAT IS SPREAD OPERATOR IN JSX?
+THE SPREAD OPERATOR(...)is used to expand or spread an array or object.
+
+36.WHAT ARE THE TYPES OF CONDITONAL RENDERING IN JSX?
+1. if/else   2. Ternary operator 3.&& operator 4. Switch statement
+
+37.HOW DO YOU ITERATE OVER A LIST IN JSX? WHAT IS MAP() METHOD?
+MAP() method allows you to iterate over an array and modify its elements using a callback function
+
+38.CAN A BROSER READ A JSX FILE?
+No, Browsers cannot directly interpret or understand JSX Files.
+Babel takes jsx and converts it into equivalent javascript code that browsers can understand
+
+39.WHAT IS TANSPILER? WHAT IS THE DIFFERENCE BETWEEN COMPILER & TRANPILER?9
+A Transpiler is a tool that converts source code from one high-level programming language(JSX) to another (JAVASCRIPT)   
+example = BABEL
+A COMPILER is a tool that converts high-level programming language(JAVA) into lower level language (machine code or bytecode). 
+
+40. IS IT POSSIBLE TO USE JSX WITHOUT REACT?
+yes,it's possible to use jsx without React by creating your own transpiler like Babel.
+- However, this is not recommended since JSX is tightly integrated with react and relies on many React-Specific features
+
+
+
+
+ 
+//  ALL HOOKS IN REACT  ///////////////////////////////////////////
+
+.1 what are hook in react?
+- Hooks were added to react in version 16.8
+- Hooks are functions that let you "hook into" React state and lifecycle features from functions components
+- Hooks allows functions components to have access to state  and other React Features. Beacause of this, class components are generally no longer needed
+
+2. Important things about the hooks.
+a. You must import Hooks from react.
+b.Hooks can only be called inside React function components.
+3.Hooks can only be called at the top level of a component.
+4.Hooks can't be conditional.
+
+3. USESTATE HOOK and SYNTAX
+-SYNTAX and defination = const [count, setCount] = useState(0);  and it retruns array of 2 elements  and we use this hook to store our value in any varaible 
+
+-- count = State variable 
+-- seTCount = update function
+-- useState(0) = 0 initial state 
+
+4. UseEffect HOOK and SYNTAX
+SYNTAX = useEffect (() => {},[dependancy])
+it accepts a callback function. And dependency array is optional 
+
+three cases 
+1. when we dont have any dependecny
+2. when we passed an empty array as dependecny so it will render only first time " only once'
+3. when we pass any prope or state values as dependency so will render every time when the dependecy prop or state value will be changed. 
+
+cleanup function = we used this function when we don't need previous data 
+
+5. USECONTEXT
+props drilling = to tacklet the props drilling we use USECONTEXT hook.
+
+createcontext
+provider 
+userContext
+
+6.USEREDUCER HOOK 
+syntax = const [state, dispatch] = useReducer (reducer, initial_val) and retuns an array of 2 elements 
+
+reducer accept 2 functions = state & Action 
+
+6.USEREF HOOK =  it returns an object with property name current
+
+7. Uselayouthook =   it same like useeffect hook and it works synchrosily and it render beofre page load
+
+8. useMemo hook = const name = useMemo (callback,[dependency array]) and in this we can return the value as wel but in useeffect we cant
+
+9. Usecall back = usecallback(() =>{
+  },[dependency array])  = and it return the function 
+
+10.  
+
+
+
+
